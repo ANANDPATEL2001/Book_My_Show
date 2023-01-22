@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+For this project we have used following - 
+- TailwindCSS - Utility based CSS Framework including many UI components
+- React Slick - carousel component (for carousel)
+- Axios - promise based HTTP client
+- Headless UI - component for tailwind CSS/React
+- React icons - React icons for our React project
+- react-router-dom - npm package for featuring Routing in clint & server side in React
+- Slick Carousel - for CSS and Fonts
