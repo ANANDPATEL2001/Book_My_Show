@@ -80,3 +80,4 @@ For this project we have used following -
 - React icons - React icons for our React project
 - react-router-dom - npm package for featuring Routing in clint & server side in React
 - Slick Carousel - for CSS and Fonts
+- react-context-api - Where we can store or update date from anywhere i.e.data from any component & also we can access it from anywhere in the component
