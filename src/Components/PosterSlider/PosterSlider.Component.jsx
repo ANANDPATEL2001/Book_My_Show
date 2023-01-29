@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import Poster from '../Poster/Poster.Component'
 
+
 const PosterSlider = (props) => {
   // Following formate is used in order to avoid the repetitive use of {props.parameter} 
   // Through following we can directly use the provided props as follows

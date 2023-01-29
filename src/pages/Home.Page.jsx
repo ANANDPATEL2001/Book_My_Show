@@ -7,8 +7,8 @@ import DefaultLayoutHoc from '../layouts/Default.layout';
 
 //Components
 import EntertainmentCardSlider from '../Components/Entertainment/EntertainmentCard.Component';
-import HeroCarousel from '../Components/HeroCarousel/HeroCarouselComponent';
 import PosterSlider from '../Components/PosterSlider/PosterSlider.Component';
+import HeroCarousel from '../Components/HeroCarousel/HeroCarousel.Component';
 
 
 

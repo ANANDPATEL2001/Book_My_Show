@@ -8,6 +8,8 @@ import { FaCcVisa, FaCcApplePay } from 'react-icons/fa';
 import MovieLayoutHoc from '../layouts/Movie.layout';
 import { MovieContext } from '../context/Movie.Context';
 import PosterSlider from '../Components/PosterSlider/PosterSlider.Component';
+import MovieHero from '../Components/MovieHero/MovieHero.Component';
+
 
 const MoviePage = () => {
   const { id } = useParams();
@@ -55,11 +57,45 @@ const MoviePage = () => {
 
   const settingCast = {};
 
-  const settings = {};
+  const settings = {
+    infinite: false,
+    speed : 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    // Following is used for responsive screen
+    responsive: [
+      {
+        // 'Breakpoint' basically refers to screen-width where properties need to aplied
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide : 4,
+        }
+      }
+    ]
+  };
 
   return (
     <>
       {/* Movie-Hero Section */}
+      <MovieHero /> 
+      
       <div className='py-12 container px-4 lg:ml-20 lg:w-2/1'>
         <div className='flex flex-col items-start gap-3'>
           <h1 className='text-gray-800 font-bold text-2xl'>About the Movies</h1>
@@ -102,16 +138,16 @@ const MoviePage = () => {
 
       {/* Recommendation Movie Sliders */}
       <div className='my-8'>
-        <PosterSlider config={settings} title="Recommended Movies" Posters={recommendedMovies} idDark={false} />
+        <PosterSlider config={settings} title="Recommended Movies" posters={similarMovies} isDark={false} />
       </div>
 
-      {/* <div className='my-8'>
+      <div className='my-8'>
         <hr />
-      </div> */}
+      </div>
 
-      {/* <div className='my-8'>
-        <PosterSlider config={settings} title="BMS_XCLUSIVE" Posters={recommendedMovies} idDark={false} />
-      </div> */}
+      <div className='my-8'>
+        <PosterSlider config={settings} title="BMS_XCLUSIVE" posters={recommendedMovies} isDark={false} />
+      </div>
     </>
   )
 };
